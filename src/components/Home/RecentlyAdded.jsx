@@ -18,7 +18,7 @@ export default function RecentlyAdded() {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`https://library-management-system-3fx0.onrender.com/get-recent-book`);
+      const response = await axios.get(`https://library-management-system-1-06yg.onrender.com/get-recent-book`);
       if (response.data.status === 'Success' && Array.isArray(response.data.data)) {
         setData(response.data.data);
       } else {
@@ -46,7 +46,7 @@ export default function RecentlyAdded() {
         Recently added books
       </Text>
       {loading ? (
-        <Text>
+        <Text textAlign={"center"}>
           <CircularProgress isIndeterminate color="green.300" />
         </Text>
       ) : error ? (

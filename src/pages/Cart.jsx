@@ -19,7 +19,7 @@ export default function Cart() {
 
   const handler = async () => {
     try {
-      const res = await axios.get('https://library-management-system-3fx0.onrender.com/get-user-cart', { headers });
+      const res = await axios.get('https://library-management-system-1-06yg.onrender.com/get-user-cart', { headers });
       console.log('Get User Cart Response:', res);
       if (res.status === 200) {
         setCart(res.data.data);

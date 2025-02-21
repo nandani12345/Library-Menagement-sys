@@ -17,7 +17,7 @@ export default function Setting() {
 
     const handler = async () => {
         try {
-            const res = await axios.get('https://library-management-system-3fx0.onrender.com/user', { headers });
+            const res = await axios.get('https://library-management-system-1-06yg.onrender.com/user', { headers });
             console.log(res.data);
 
             setProfileData(res.data);
@@ -63,7 +63,7 @@ export default function Setting() {
 
     const handleUpdate = async () => {
         try {
-            const res = await axios.put('https://library-management-system-3fx0.onrender.com/user-update-address', { address: value.address }, { headers });
+            const res = await axios.put('https://library-management-system-1-06yg.onrender.com/user-update-address', { address: value.address }, { headers });
             console.log(res.data);
             setProfileData({ ...profileData, address: value.address });
             toast({

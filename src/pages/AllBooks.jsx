@@ -18,7 +18,7 @@ export default function AllBooks() {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`https://library-management-system-3fx0.onrender.com/get-all-books`);
+      const response = await axios.get(`https://library-management-system-1-06yg.onrender.com/get-all-books`);
       if (response.data.status === 'Success' && Array.isArray(response.data.data)) {
         setData(response.data.data);
       } else {
@@ -46,7 +46,7 @@ export default function AllBooks() {
         All Books
       </Text>
       {loading ? (
-        <Text>
+        <Text textAlign={"center"}>
           <CircularProgress isIndeterminate color="green.300" />
         </Text>
       ) : error ? (

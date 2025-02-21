@@ -15,7 +15,7 @@ export default function BookCard({ data, favourites }) {
 
   const handleRemoveBook = async () => {
     try {
-      const res = await axios.put(`https://library-management-system-3fx0.onrender.com/delete-fav`, {}, { headers });
+      const res = await axios.put(`https://library-management-system-1-06yg.onrender.com/delete-fav`, {}, { headers });
       toast({
         status: "success",
         title: res.data.message,

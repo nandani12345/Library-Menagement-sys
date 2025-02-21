@@ -34,7 +34,7 @@ export default function SignUp() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`https://library-management-system-3fx0.onrender.com/signup`, data);
+      const res = await axios.post(`https://library-management-system-1-06yg.onrender.com/signup`, data);
       // Update the state with the relevant data
       setData({
         username: "",

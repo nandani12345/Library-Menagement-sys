@@ -36,7 +36,7 @@ export default function AddBook() {
     const submitHandle = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(`https://library-management-system-3fx0.onrender.com/add-book`, data, { headers });
+            const res = await axios.post(`https://library-management-system-1-06yg.onrender.com/add-book`, data, { headers });
             toast({
                 status: "success",
                 title: res.data.message,

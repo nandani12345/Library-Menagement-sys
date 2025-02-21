@@ -43,7 +43,7 @@ export default function AllOrdersHistory() {
   const fetchOrders = async () => {
     try {
       const res = await axios.get(
-        "https://library-management-system-3fx0.onrender.com/get-all-Order-Details",
+        "https://library-management-system-1-06yg.onrender.com/get-all-Order-Details",
         { headers }
       );
       setAllOrders(res.data.data);
@@ -78,7 +78,7 @@ export default function AllOrdersHistory() {
         const status = values[id];
 
         const res = await axios.put(
-          `https://library-management-system-3fx0.onrender.com/update-status/${id}`,
+          `https://library-management-system-1-06yg.onrender.com/update-status/${id}`,
           { status },
           { headers }
         );

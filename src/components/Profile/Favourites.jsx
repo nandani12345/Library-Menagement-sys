@@ -22,7 +22,7 @@ export default function Favourites() {
             }
 
             try {
-                const res = await axios.get(`https://library-management-system-3fx0.onrender.com/getfav`, { headers });
+                const res = await axios.get(`https://library-management-system-1-06yg.onrender.com/getfav`, { headers });
                 setFavourites(res.data.data);
                 setLoading(false);
             } catch (error) {
@@ -69,7 +69,9 @@ export default function Favourites() {
                 </SimpleGrid>
             ) : (
                 <Box bg={"grey"} w={"full"} height="100vh" display="flex" justifyContent="center" alignItems="center" textAlign="center">
-                    <Text fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }} >No favourite books found.</Text>
+                    <Text fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }} style={{display:"flex"}} >No favourite books found.
+                        <img src="/fav.JPG" alt="fav"  />
+                    </Text>
                 </Box>
             )}
         </Box>

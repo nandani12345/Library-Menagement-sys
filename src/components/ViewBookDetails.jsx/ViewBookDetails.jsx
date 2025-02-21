@@ -34,7 +34,7 @@ export default function ViewBookDetails() {
     const fetchData = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`https://library-management-system-3fx0.onrender.com/get-book-by-id/${id}`);
+            const response = await axios.get(`https://library-management-system-1-06yg.onrender.com/get-book-by-id/${id}`);
 
             if (response.status >= 200 && response.status < 300) {
                 if (response.data.status === 'Success') {
@@ -71,7 +71,7 @@ export default function ViewBookDetails() {
 
     const handleFav = async () => {
         try {
-            const res = await axios.put(`https://library-management-system-3fx0.onrender.com/addFavourite`,
+            const res = await axios.put(`https://library-management-system-1-06yg.onrender.com/addFavourite`,
                 {}, { headers })
             toast({
                 status: "success",
@@ -90,7 +90,7 @@ export default function ViewBookDetails() {
 
     const handleToCart = async () => {
         try {
-            const res = await axios.put(`https://library-management-system-3fx0.onrender.com/add-cart-to`,
+            const res = await axios.put(`https://library-management-system-1-06yg.onrender.com/add-cart-to`,
                 {}, { headers })
             toast({
                 status: "success",
@@ -110,7 +110,7 @@ export default function ViewBookDetails() {
 
     const deleteHandler = async () => {
         try {
-            const res = await axios.delete(`https://library-management-system-3fx0.onrender.com/delete-book`, { headers })
+            const res = await axios.delete(`https://library-management-system-1-06yg.onrender.com/delete-book`, { headers })
             console.log(res.data);
 
             toast({

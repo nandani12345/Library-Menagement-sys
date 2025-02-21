@@ -65,7 +65,7 @@ export default function UpdateBook() {
         e.preventDefault();
         if (!validateData()) return;
         try {
-            const res = await axios.put(`https://library-management-system-3fx0.onrender.com/update-book`, data, { headers });
+            const res = await axios.put(`https://library-management-system-1-06yg.onrender.com/update-book`, data, { headers });
             toast({
                 status: "success",
                 title: res.data.message,
@@ -95,7 +95,7 @@ export default function UpdateBook() {
     const fetchData = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`https://library-management-system-3fx0.onrender.com/get-book-by-id/${id}`);
+            const response = await axios.get(`https://library-management-system-1-06yg.onrender.com/get-book-by-id/${id}`);
 
             if (response.status >= 200 && response.status < 300) {
                 if (response.data.status === 'Success') {
